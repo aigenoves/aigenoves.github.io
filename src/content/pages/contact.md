@@ -1,14 +1,15 @@
 ---
-title: Get in touch
+title: Ponte en contacto
 seo:
-  title: Contact
-  description: Get in touch through email or social media! Let me know how I can help.
+  title: Contacto
+  description: ¡Ponte en contacto a través de correo electrónico o redes sociales! Déjame saber cómo puedo ayudar.
 ---
 
-Thank you for reaching out! Whether you have a question, a suggestion, or just want to share your thoughts, I'm all ears. Feel free to get in touch through any of the methods below:
+Agradezco mucho tu contacto. Para cualquier consulta, sugerencia o comentario que desees realizar, quedo a tu entera disposición. Puedes localizarme a través de los siguientes medios:
 
 _Email:_
-Feel free to drop me an email at [example@example.com](mailto:example@example.com), and I'll do my best to respond as soon as possible.
+
+¿Hablamos? Escríbeme a [agustingenoves@gmail.com](mailto:agustingenoves@gmail.com)  y te contestaré en cuanto lo lea.
 
 _Social Media:_
-Connect with me on social media as well. Find me on [Twitter](https://twitter.com) or [LinkedIn](https://www.linkedin.com/).
+Me podes encontrar en [LinkedIn](https://www.linkedin.com/in/agustin-genoves/).
