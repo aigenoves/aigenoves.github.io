@@ -1,9 +1,9 @@
 ---
 title: 'TimeWarp - Travel Agency Website'
 description: Explore the possibilities of time travel through an immersive website for a fictional travel agency, complete with dynamic destination timelines and interactive historical events.
+published: false
 publishDate: 'Oct 2 2023'
 isFeatured: true
-published: false
 seo:
   image:
     src: '/project-2.jpg'

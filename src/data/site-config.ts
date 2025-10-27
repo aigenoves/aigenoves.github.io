@@ -94,7 +94,7 @@ const siteConfig: SiteConfig = {
         text: "Soy Agustín Genoves, explorador del mundo digital y apasionado por aprender cada día algo nuevo. Este blog es mi espacio para documentar proyectos, ideas y descubrimientos en programación, tecnología y más allá. Si te interesa la innovación, los retos y el aprendizaje continuo, ¡bienvenido!.",
         image: {
             src: '/blog.jpg',
-            alt: 'Dados de letras que escriben la palabra BLOG'
+            alt: 'Cuaderno, lapiceram tasa de café y celular sobre una mesa'
         },
         actions: [
             {
