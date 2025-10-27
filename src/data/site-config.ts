@@ -93,8 +93,8 @@ const siteConfig: SiteConfig = {
         title: 'Hola a todos! Bienvenidos a mi lugarcito en la Web!',
         text: "Soy Agustín Genoves, explorador del mundo digital y apasionado por aprender cada día algo nuevo. Este blog es mi espacio para documentar proyectos, ideas y descubrimientos en programación, tecnología y más allá. Si te interesa la innovación, los retos y el aprendizaje continuo, ¡bienvenido!.",
         image: {
-            src: '/hero.jpeg',
-            alt: 'A person sitting at a desk in front of a computer'
+            src: '/blog.jpeg',
+            alt: 'Dados de letras que escriben la palabra BLOG'
         },
         actions: [
             {
