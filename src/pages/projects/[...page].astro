@@ -1,14 +1,15 @@
 ---
 import type { GetStaticPathsOptions, Page } from 'astro';
 import { type CollectionEntry, getCollection } from 'astro:content';
-import BaseLayout from '../../layouts/BaseLayout.astro';
 import Pagination from '../../components/Pagination.astro';
 import ProjectPreview from '../../components/ProjectPreview.astro';
 import siteConfig from '../../data/site-config';
+import BaseLayout from '../../layouts/BaseLayout.astro';
 import { sortItemsByDateDesc } from '../../utils/data-utils';
 
 export async function getStaticPaths({ paginate }: GetStaticPathsOptions) {
     const projects = (await getCollection('projects')).sort(sortItemsByDateDesc);
+    const visibleProjects = projects.filter((p) => !p.data.hidden);
     return paginate(projects, { pageSize: siteConfig.projectsPerPage || 6 });
 }
 
@@ -25,6 +26,6 @@ const portfolio = page.data;
     showHeader={false}
 >
     <h1 class="mb-12 text-2xl leading-tight font-serif italic sm:mb-16 sm:text-4xl">Projects</h1>
-    {portfolio.map((project) => <ProjectPreview project={project} class="mb-10 sm:mb-12" />)}
+    {portfolio.filter((project) => !project.data.hidden).map((project) => <ProjectPreview project={project} class="mb-10 sm:mb-12" />)}
     <Pagination page={page} class="my-16 sm:my-24" />
 </BaseLayout>
