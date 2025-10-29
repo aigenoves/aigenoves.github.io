@@ -1,22 +1,25 @@
 ---
 import { getCollection } from 'astro:content';
-import BaseLayout from '../layouts/BaseLayout.astro';
 import Button from '../components/Button.astro';
 import Hero from '../components/Hero.astro';
 import PostPreview from '../components/PostPreview.astro';
 import ProjectPreview from '../components/ProjectPreview.astro';
 import siteConfig from '../data/site-config';
+import BaseLayout from '../layouts/BaseLayout.astro';
 import { sortItemsByDateDesc } from '../utils/data-utils';
 
-const posts = (await getCollection('blog')).sort(sortItemsByDateDesc);
+// --- Posts ---
+const posts = (await getCollection('blog')).sort(sortItemsByDateDesc).filter((p) => !p.data.hidden); // solo posts visibles
 const featuredPosts = posts.filter(({ data }) => data.isFeatured);
 
-const projects = (await getCollection('projects')).sort(sortItemsByDateDesc);
+// --- Projects ---
+const projects = (await getCollection('projects')).sort(sortItemsByDateDesc).filter((p) => !p.data.hidden); // solo proyectos visibles
 const featuredProjects = projects.filter(({ data }) => data.isFeatured);
 ---
 
 <BaseLayout description={siteConfig.description} image={siteConfig.image}>
     <Hero />
+
     {
         featuredProjects?.length > 0 && (
             <div class="mb-16 sm:mb-24">
@@ -30,6 +33,7 @@ const featuredProjects = projects.filter(({ data }) => data.isFeatured);
             </div>
         )
     }
+
     {
         featuredPosts?.length > 0 && (
             <div class="mb-16 sm:mb-24">
